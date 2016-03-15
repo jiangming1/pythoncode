@@ -4,8 +4,8 @@
 #日期 2016-03-09
 from selenium import webdriver
 import time
-runtag='fj052_mag_prod_build_20160308.1'
-a='2016-3-9 02:00:00'
+runtag='re'
+a='2016-3-11 02:00:00'
 a_struck_time=time.strptime(a,'%Y-%m-%d %H:%M:%S')
 print time.mktime(a_struck_time)
 print time.time()
@@ -20,11 +20,11 @@ driver.find_element_by_id("j_username").send_keys("jiangming")
 driver.find_element_by_name("j_password").send_keys("kjt@123")
 driver.find_element_by_id("yui-gen1-button").click()
 time.sleep(3)
-driver.get("http://192.168.180.18:8080/view/%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/job/fj052_mag_prod_deploy/build?delay=0sec")
+driver.get("http://192.168.180.18:8080/view/%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/job/fj044_basis_prod_deploy/build?delay=0sec")
 driver.find_element_by_class_name("setting-input").send_keys(runtag)
-driver.find_element_by_id("yui-gen1-button").click()
+#driver.find_element_by_id("yui-gen1-button").click()
 time.sleep(3)
-driver.get("http://192.168.180.18:8080/view/%E7%81%BE%E5%A4%87%E7%8E%AF%E5%A2%83/job/fj052_mag_prod_deploy//build?delay=0sec")
+driver.get("http://192.168.180.18:8080/view/%E7%81%BE%E5%A4%87%E7%8E%AF%E5%A2%83/job/fj044_basis_prod_deploy/build?delay=0sec")
 driver.find_element_by_class_name("setting-input").send_keys(runtag)
 driver.find_element_by_id("yui-gen1-button").click()
 time.sleep(3)
