@@ -17,6 +17,11 @@ while runtime>time.time():
 
 driver=webdriver.Firefox()
 driver.get("https://portal.chinanetcenter.com/cas/login?service=https%3A%2F%2Fsi.chinanetcenter.com%2Fr_sec_login")
+time.sleep(5)
+action = webdriver.ActionChains(driver)
+action.click(driver.find_element_by_id("username"))
+action.move_by_offset(600,270)
+action.click()
 driver.find_element_by_id("username").send_keys("yunwei2016")
 out=False
 while out==False:
@@ -44,6 +49,9 @@ driver.find_element_by_id("password").send_keys("yunwei@2016")
 driver.find_element_by_id("jcaptcha").send_keys(line)
 driver.find_element_by_id("login-btn").click()
 driver.get("https://si.chinanetcenter.com/purview/contentManage/update_directory.html?CODE=SI_CP_PURGE_DIRECTORY&productCode=SI_CONTENT_MANAGE")
-driver.find_element_by_id("J_dir_text").send_keys("https://static.kjtpay.com/")
+try:
+    driver.find_element_by_id("J_dir_text").send_keys("https://static.kjtpay.com/")
+except NoSuchElementException:
+    assert 0, "can't find seleniumhq"
 driver.get_screenshot_as_file('/googleend.png')
 
