@@ -1,4 +1,4 @@
-# coding: UTF-8
+﻿# coding: UTF-8
 #作者 蒋明
 #作用 cdn登录刷新缓存
 #日期 2016-03-09
@@ -22,7 +22,7 @@ action = webdriver.ActionChains(driver)
 action.click(driver.find_element_by_id("username"))
 action.move_by_offset(600,270)
 action.click()
-driver.find_element_by_id("username").send_keys("yunwei2016")
+driver.find_element_by_id("username").send_keys("111")
 out=False
 while out==False:
     driver.find_element_by_id("jcaptchaImage").click()
@@ -45,7 +45,7 @@ while out==False:
         out=True
 time.sleep(5)
 
-driver.find_element_by_id("password").send_keys("yunwei@2016")
+driver.find_element_by_id("password").send_keys("11")
 driver.find_element_by_id("jcaptcha").send_keys(line)
 driver.find_element_by_id("login-btn").click()
 driver.get("https://si.chinanetcenter.com/purview/contentManage/update_directory.html?CODE=SI_CP_PURGE_DIRECTORY&productCode=SI_CONTENT_MANAGE")
