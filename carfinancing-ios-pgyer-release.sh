@@ -19,8 +19,8 @@ while runtime>time.time():
     print "wait"
 d=webdriver.Firefox()
 d.get("http://8.hzrrcd.com/h5/login.htm?tab=account")
-d.find_element_by_id("mobileInput").send_keys("13291488404")
-d.find_element_by_id("loginPwdInput").send_keys("opewoq")
+d.find_element_by_id("mobileInput").send_keys("13291488404x")
+d.find_element_by_id("loginPwdInput").send_keys("opewoxqxxx")
 d.find_element_by_id("loginPwdInput").send_keys(Keys.ENTER)
 time.sleep(1)
 d.get("http://8.laicunba.com/h5/bid_form.htm?id=5577659b-a96e-45ec-873e-f0fd4b75600d")
